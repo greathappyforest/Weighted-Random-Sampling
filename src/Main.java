@@ -79,7 +79,7 @@ public class Main {
     public static List<String>  WeightedRandomSamplingSequence(List<Pair> samples, int n) {
         List<String> res2= new ArrayList<String>();
         double tmp=0;
-        //red:0.4, yellow:0.9, blue: 0.1
+        //red:0.4, yellow:0.9, blue: 1.0
         for(Pair pair: samples){
             tmp+=pair.getValue();
             pair.setValue(tmp);
