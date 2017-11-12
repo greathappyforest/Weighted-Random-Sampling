@@ -29,7 +29,9 @@ public class Main {
         itemsWeight.add(new Pair("red", 0.4));
         itemsWeight.add(new Pair("yellow", 0.5));
         itemsWeight.add(new Pair("blue", 0.1));
-        List<String> res2 = WeightedRandomSamplingSequence(itemsWeight,10000);
+
+        int simpleSize=10000;
+        List<String> res2 = WeightedRandomSamplingSequence(itemsWeight,simpleSize);
 
         HashMap<String, Integer> map =new HashMap<String, Integer>();
         for (String item : res2) {
@@ -46,7 +48,7 @@ public class Main {
         for (Map.Entry<String, Integer> map2 : map.entrySet()) {
             String key = map2.getKey();
             Integer value = map2.getValue();
-            System.out.println(key + ": " + value);
+            System.out.println(key + ": " + value +"   Actual radio: " + (double)value/simpleSize);
         }
     }
 
